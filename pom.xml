@@ -7,6 +7,17 @@
 
 	<name>tob-nov-13-2012</name>
 	<description>Sample code for the Tech-Over-Bagels Presentation Nov. 13, 2012</description>
+	<organization>
+		<name>Allanbank Consulting, Inc.</name>
+		<url>http://www.allanbank.com/</url>
+	</organization>
+	<inceptionYear>2012</inceptionYear>
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
 	<dependencies>
 		<dependency>
@@ -28,27 +39,23 @@
 			</plugin>
 		</plugins>
 	</build>
-	<organization>
-		<name>Allanbank Consulting, Inc.</name>
-		<url>http://www.allanbank.com/</url>
-	</organization>
-	<inceptionYear>2012</inceptionYear>
+
 	<repositories>
-    		<repository>
-      			<releases>
-        			<enabled>true</enabled>
-        			<updatePolicy>always</updatePolicy>
-        			<checksumPolicy>warn</checksumPolicy>
-      			</releases>
-      			<snapshots>
-        			<enabled>false</enabled>
-        			<updatePolicy>never</updatePolicy>
-        			<checksumPolicy>fail</checksumPolicy>
-      			</snapshots>
-      			<id>allanbank</id>
-      			<name>Allanbank Releases</name>
-      			<url>http://www.allanbank.com/repo/</url>
-      			<layout>default</layout>
-    		</repository>
-  	</repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>warn</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</snapshots>
+			<id>allanbank</id>
+			<name>Allanbank Releases</name>
+			<url>http://www.allanbank.com/repo/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
 </project>
