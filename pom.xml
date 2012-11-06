@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.allanbank</groupId>
+	<artifactId>tob-nov-13-2012</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>tob-nov-13-2012</name>
+	<description>Sample code for the Tech-Over-Bagels Presentation Nov. 13, 2012</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.allanbank</groupId>
+			<artifactId>mongodb-async-driver</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<organization>
+		<name>Allanbank Consulting, Inc.</name>
+		<url>http://www.allanbank.com/</url>
+	</organization>
+	<inceptionYear>2012</inceptionYear>
+	<repositories>
+    		<repository>
+      			<releases>
+        			<enabled>true</enabled>
+        			<updatePolicy>always</updatePolicy>
+        			<checksumPolicy>warn</checksumPolicy>
+      			</releases>
+      			<snapshots>
+        			<enabled>false</enabled>
+        			<updatePolicy>never</updatePolicy>
+        			<checksumPolicy>fail</checksumPolicy>
+      			</snapshots>
+      			<id>allanbank</id>
+      			<name>Allanbank Releases</name>
+      			<url>http://www.allanbank.com/repo/</url>
+      			<layout>default</layout>
+    		</repository>
+  	</repositories>
+</project>
