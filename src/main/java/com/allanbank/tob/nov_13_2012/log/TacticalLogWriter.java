@@ -32,6 +32,7 @@ import java.util.concurrent.TimeUnit;
 
 import com.allanbank.mongodb.Durability;
 import com.allanbank.mongodb.MongoCollection;
+import com.allanbank.mongodb.ReadPreference;
 import com.allanbank.mongodb.bson.Document;
 import com.allanbank.mongodb.bson.builder.BuilderFactory;
 import com.allanbank.mongodb.bson.builder.DocumentBuilder;
@@ -304,6 +305,7 @@ public class TacticalLogWriter {
         final SimpleDateFormat sdf = new SimpleDateFormat(
                 "yyyy-MM-dd'T'HH:mm:ss");
         final Aggregate command = new Aggregate.Builder()
+                .setReadPreference(ReadPreference.PREFER_SECONDARY)
                 .match(where("id.ts")
                         .greaterThanOrEqualToTimestamp(
                                 sdf.parse("2012-11-13T05:00:00").getTime())
@@ -313,7 +315,8 @@ public class TacticalLogWriter {
                         .equals("Chrome").and("id.screen_resolution")
                         .equals("1920x1080").and("id.location_country")
                         .equals("AU"))
-                .group(constantId("count"), set("sum").sum("count")).build();
+                .group(constantId("count"), set("pageviews").sum("count"))
+                .build();
 
         final List<Document> results = collection.aggregate(command);
         System.out.println(results);
